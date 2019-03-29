@@ -2,20 +2,23 @@
   height: 32px;
   width: 165px;
   padding: 5px;
+  margin: 10px;
+  background-color: white;
 }
 
 /* The container */
 .container {
   display: block;
   position: relative;
-  padding-left: 20px;
-  margin-bottom: 12px;
+  padding-left: 40px;
+  margin: 3px 5px 5px 5px;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-align: left;
 }
 
 /* Hide the browser's default checkbox */
@@ -27,13 +30,18 @@
   width: 0;
 }
 
+.container span {
+  border-radius: 5px;
+  border: 3px solid #2196F3;
+}
+
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   background-color: #eee;
 }
 
@@ -61,8 +69,8 @@
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-  left: 9px;
-  top: 5px;
+  left: 6px;
+  top: 2px;
   width: 5px;
   height: 10px;
   border: solid white;
