@@ -4,7 +4,7 @@ import './checkBox.css';
 const Checkbox = ({ label, isChecked, handleCheckboxChange }) => (
   <div className="checkbox">
     <label className="container">{label}
-      <input type="checkbox" value={label} checked={isChecked} onChange={handleCheckboxChange} />
+      <input type="checkbox" value={label} defaultChecked={isChecked} onChange={handleCheckboxChange} />
       <span className="checkmark"></span>
     </label>
   </div>
