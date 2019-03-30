@@ -6,8 +6,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CheckBox label="CheckBox1" isChecked={true} handleCheckboxChange={() => console.log('test')}/>
-        <CheckBox label="CheckBox2"  isChecked={false} handleCheckboxChange={() => console.log('test')}/>
+        <CheckBox value="CheckBox1" defaultChecked={true} onChange={() => console.log('test')}/>
+        <CheckBox value="CheckBox2"  defaultChecked={false} onChange={() => console.log('test')}/>
       </div>
     );
   }
