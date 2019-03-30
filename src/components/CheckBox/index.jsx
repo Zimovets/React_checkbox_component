@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './checkBox.css';
 
 const Checkbox = ( props ) => (
@@ -8,6 +9,12 @@ const Checkbox = ( props ) => (
       <span className="checkmark"></span>
     </label>
   </div>
-  );
+);
+
+Checkbox.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  defaultChecked: PropTypes.bool.isRequired,
+};
 
 export default Checkbox;
