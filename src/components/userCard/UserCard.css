@@ -23,16 +23,17 @@
   background-color: #96c0e81a;
   text-align: start;
   vertical-align: top;
+  padding: 10px;
 }
 
 .user_card_text_header {
   color: black;
   display: flex;
-  margin-left: 10px;
 }
 
-.user_card_text_header p {
+p {
   margin-right: 10px;
 }
+
 
 

@@ -23,6 +23,10 @@ const UserCard = ({userID}) => {
           <p><a href={user.html_url} target="_blank" rel="noopener noreferrer">{user.login}</a></p>
           <p>{user.name}</p>
         </div>
+        <div><p>{user.bio}</p></div>
+        <div>
+          <p><i class="fas fa-map-marker-alt"></i>{user.location}</p>  
+        </div>
       </div>
     </div>
   )
