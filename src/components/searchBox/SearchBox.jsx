@@ -4,17 +4,29 @@ import PropTypes from 'prop-types';
 
 import './SearchBox';
 
-const SearchBox = ({onClick}) => (
-    <div className='content'>
-      <form onSubmit={onClick}>
-        <input type="text"/>
-        <input type="submit" data-in value='Click'/>
-      </form>
-    </div>
-)
+const SearchBox = ({onClick}) => {
+  const [search, setSearch] = useState('');
+  
+  const searchOnChange = (e) => {
+    setSearch(e.target.value);
+  }
+
+  const buttonOnClick = (e) => {
+    onClick(search);
+  }
+
+  return (
+  <div className='content'>
+    <form>
+      <input type="text" onChange={searchOnChange}/>
+      <input type="button" value='Click' onClick={buttonOnClick}/>
+    </form>
+  </div>
+  )
+}
 
 SearchBox.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 }
 
 export default SearchBox;

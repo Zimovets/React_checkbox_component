@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 
 import ErrorBoundary from '../errorBoudary/ErrorBoudary';
 import SearchBox from '../searchBox/SearchBox';
@@ -12,28 +11,24 @@ import './ContentPage';
 
 
 const ContentPage = () => {
+  const { getUsersByCity } = new GitHubService();
   const [users, setUsers] = useState([]);
-  const [city, setCity] = useState('');
+  const [search, setSearch] = useState('');
 
-  const searchOnClick = (e) => {
-    console.log(e);
-    getUsersByCity(e.target.value).then(res => setUsers(res.items));
-    e.preventDefault();
-    console.log(users);
+  const searchOnClick = (searchValue) => {
+    setSearch(searchValue);
   }
 
-  const { getUsersByCity } = new GitHubService();
+  useEffect(() => {
+  getUsersByCity(search)
+  .then(res => setUsers(res.items))}, [search])
 
   return (
     <div className='content'>
-      <SearchBox onClick={searchOnClick}/>      
+      <SearchBox onClick={searchOnClick}/>
+      {users.map(item => <p>{item.login}</p> )}     
     </div>
   )
-}
-
-ContentPage.propTypes = {
-  value: PropTypes.string,
-  label: PropTypes.string,
 }
 
 export default ContentPage;
