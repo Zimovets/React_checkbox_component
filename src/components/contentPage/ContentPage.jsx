@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 import ErrorBoundary from '../errorBoudary/ErrorBoudary';
 import SearchBox from '../searchBox/SearchBox';
+import UserCard from '../userCard/UserCard';
 
-import GitHubService from '../../services/GithubService'
+import GitHubService from '../../services/GithubService';
 
 import './ContentPage';
 
@@ -26,7 +27,7 @@ const ContentPage = () => {
   return (
     <div className='content'>
       <SearchBox onClick={searchOnClick}/>
-      {users.map(item => <p>{item.login}</p> )}     
+      {users.map(item => <ErrorBoundary key={item.id}><UserCard key={item.id} userID={item.id}/></ErrorBoundary>)}     
     </div>
   )
 }

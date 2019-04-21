@@ -10,7 +10,7 @@ export default class GitHubService {
   }
 
   getUserbyId = async (id) => {
-    const res = await fetch(`${this.apiBase}/user/${id}`);
+    const res = await fetch(`${this.apiBase}user/${id}`);
     if (!res.ok) {
       throw new Error('Something wrong');
     }

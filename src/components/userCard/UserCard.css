@@ -1,0 +1,23 @@
+.user_card_content {
+  display: table;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+}
+
+.user_card_avatar {
+  display: table-cell;
+  background-color: blue;
+  width: 50px;
+}
+
+.user_card_avatar img {
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+}
+
+.user_card_text {
+  display: table-cell;
+  background-color: blueviolet;
+}
