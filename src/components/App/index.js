@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import CheckBox from '../CheckBox';
+
+import ErrorBoundary from '../errorBoudary/ErrorBoudary';
+import ContentPage from '../contentPage/ContentPage';
+
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <CheckBox label="CheckBox1" isChecked={true} handleCheckboxChange={() => console.log('test')}/>
-        <CheckBox label="CheckBox2"  isChecked={false} handleCheckboxChange={() => console.log('test')}/>
+      <div className="app">
+        <ErrorBoundary><ContentPage/></ErrorBoundary>
       </div>
     );
   }
