@@ -18,7 +18,12 @@ const UserCard = ({userID}) => {
       <div className='user_card_avatar'>
         <img src={user.avatar_url} alt="image"/>
       </div>
-      <div className='user_card_text'>test</div>
+      <div className='user_card_text'>
+        <div className='user_card_text_header'>
+          <p><a href={user.html_url} target="_blank" rel="noopener noreferrer">{user.login}</a></p>
+          <p>{user.name}</p>
+        </div>
+      </div>
     </div>
   )
 }

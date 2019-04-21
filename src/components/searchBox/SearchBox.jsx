@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 
-import './SearchBox';
+import './SearchBox.css';
 
 const SearchBox = ({onClick}) => {
   const [search, setSearch] = useState('');
@@ -16,7 +16,7 @@ const SearchBox = ({onClick}) => {
   }
 
   return (
-  <div className='content'>
+  <div className='search_content'>
     <form>
       <input type="text" onChange={searchOnChange}/>
       <input type="button" value='Click' onClick={buttonOnClick}/>
