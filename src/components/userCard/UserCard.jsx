@@ -12,7 +12,7 @@ const UserCard = ({userID}) => {
   useEffect(() => {
     getUserbyId(userID)
     .then(res => setUser(res))}, [])
-  
+
   return (
     <div className='user_card_content'>
       <div className='user_card_avatar'>
@@ -25,7 +25,7 @@ const UserCard = ({userID}) => {
         </div>
         <div><p>{user.bio}</p></div>
         <div>
-          <p><i class="fas fa-map-marker-alt"></i>{user.location}</p>  
+          <p><i className="fas fa-map-marker-alt"></i>{user.location}</p>  
         </div>
       </div>
     </div>
