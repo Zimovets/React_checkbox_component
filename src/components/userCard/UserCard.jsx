@@ -16,7 +16,7 @@ const UserCard = ({userID}) => {
   return (
     <div className='user_card_content'>
       <div className='user_card_avatar'>
-        <img src={user.avatar_url} alt="image"/>
+        <img src={user.avatar_url} alt=""/>
       </div>
       <div className='user_card_text'>
         <div className='user_card_text_header'>
