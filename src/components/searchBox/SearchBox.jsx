@@ -16,7 +16,7 @@ const SearchBox = ({onClick}) => {
   }
 
   return (
-  <div className='search_content'>
+  <div className='search_content' onMouseLeave={() => console.log('-----------test-----------')}>
     <form>
       <input type="text" onChange={searchOnChange}/>
       <input type="button" value='Click' onClick={buttonOnClick}/>

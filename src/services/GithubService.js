@@ -1,5 +1,5 @@
 export default class GitHubService {
-  apiBase = 'http://api.github.com/';
+  apiBase = 'https://api.github.com/';
 
   getUsersByCity = async (city) => {
     const res = await fetch(`${this.apiBase}search/users?q=location:${city}&per_page=10`);
