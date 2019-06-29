@@ -1,11 +1,12 @@
+//core
 import React, { Component } from 'react'
 
 export default class HistoryPage extends Component {
     render() {
         return (
-            <div>
+            <React.Fragment>
                 HistoryPage
-            </div>
+            </React.Fragment>
         )
     }
 }
