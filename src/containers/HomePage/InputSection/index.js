@@ -6,6 +6,7 @@ import GifCard from '../GifCard';
 
 //services
 import { getGifsbyKeyWord } from '../../../services/GiphyService';
+import { likes } from '../../../services/DBService'
 
 // Styles
 import { InputArea, InputField, InputButton, ContentArea } from './styles';
