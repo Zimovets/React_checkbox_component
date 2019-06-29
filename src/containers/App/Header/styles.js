@@ -9,6 +9,7 @@ export const HeaderContent = styled.div`
 export const LinkButton = styled.div`
     height: 30px;
     width: 150px;
+    color: black;
     background: #52adfd;
     border-radius: 5px;
     border: 1px solid #1fa1c5;
