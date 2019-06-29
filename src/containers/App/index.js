@@ -1,22 +1,18 @@
 //core
 import React, { Component } from 'react';
 
-// db
+// test
 import { history } from '../../services/DBService'
+import { getGifsbyKeyWord } from '../../services/GiphyService';
 
 // Styles
 import { Main } from './styles';
 
 class App extends Component {
   componentDidMount() {
-    this.testDb();
+    getGifsbyKeyWord('dog').then(res => console.log(res.data.map(el => el.images.original.url)));
+    
   }
-  
-  testDb = () => {
-    history.find({}, (err, data) => {
-      console.log(data);
-    })
-  };
   
   render() {
     return (
