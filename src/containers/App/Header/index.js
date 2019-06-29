@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { HeaderContent, LinkButton } from './styles';
 
 
-export default function Header() {
+const  Header = () => {
     return (
         <HeaderContent>
             <Link to='/' style={{ textDecoration: 'none' }}><LinkButton>Home</LinkButton></Link>
@@ -14,3 +14,5 @@ export default function Header() {
         </HeaderContent>
     )
 }
+
+export default Header;

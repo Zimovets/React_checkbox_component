@@ -8,6 +8,8 @@ import { getGifsbyKeyWord } from '../../services/GiphyService';
 
 //components
 import Header from './Header'
+import HomePage from '../HomePage';
+import HistoryPage from '../HistoryPage';
 
 // Styles
 import { Main } from './styles';
@@ -18,20 +20,12 @@ class App extends Component {
       <Router>
         <Main>
           <Header/>
-            <Route exact path='/' component={Home}/>
-            <Route exact path='/history' component={History}/>
+            <Route exact path='/' component={HomePage}/>
+            <Route exact path='/history' component={HistoryPage}/>
         </Main>
       </Router>
     );
   }
-}
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function History() {
-  return <h2>History</h2>;
 }
 
 export default App;
