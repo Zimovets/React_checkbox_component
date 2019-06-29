@@ -11,7 +11,6 @@ import { Main } from './styles';
 class App extends Component {
   componentDidMount() {
     getGifsbyKeyWord('dog').then(res => console.log(res.data.map(el => el.images.original.url)));
-    
   }
   
   render() {
