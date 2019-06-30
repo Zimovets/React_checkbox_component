@@ -1,6 +1,6 @@
 //core
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 //components
 import Header from './Header'
@@ -16,8 +16,10 @@ class App extends Component {
       <Router>
         <Main>
           <Header/>
-            <Route exact path='/' component={HomePage}/>
-            <Route exact path='/history' component={HistoryPage}/>
+          <Switch>
+            <Route  exact path='/' component={HomePage}/>
+            <Route  exact path='/history' component={HistoryPage}/>
+          </Switch>
         </Main>
       </Router>
     );
