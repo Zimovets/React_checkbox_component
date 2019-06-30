@@ -18,7 +18,7 @@ class App extends Component {
           <Header/>
           <Switch>
             <Route  exact path='/' component={HomePage}/>
-            <Route  exact path='/history' component={HistoryPage}/>
+            <Route  path='/history' component={HistoryPage}/>
           </Switch>
         </Main>
       </Router>
