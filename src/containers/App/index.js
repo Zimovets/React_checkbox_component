@@ -2,10 +2,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
-// test
-import { history } from '../../services/DBService'
-import { getGifsbyKeyWord } from '../../services/GiphyService';
-
 //components
 import Header from './Header'
 import HomePage from '../HomePage';

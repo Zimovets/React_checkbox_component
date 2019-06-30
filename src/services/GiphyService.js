@@ -1,5 +1,5 @@
 const api_key = 'UORjohlZnLHHZSQCqPKqRHkhwhPZpmbN'
-const api_base = 'http://api.giphy.com/v1/gifs/search?'
+const api_base = 'https://api.giphy.com/v1/gifs/search?'
 
 let gifsPath = []
 
